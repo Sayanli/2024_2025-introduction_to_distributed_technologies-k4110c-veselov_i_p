@@ -1,0 +1,21 @@
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+  name: zone-first-ippool
+spec:
+  cidr: 192.168.0.0/24
+  ipipMode: Always
+  blockSize: 26
+  natOutgoing: true
+  nodeSelector: zone == "first"
+---
+apiVersion: projectcalico.org/v3
+kind: IPPool
+metadata:
+   name: zone-second-ippool
+spec:
+  cidr: 192.168.1.0/24
+  ipipMode: Always
+  blockSize: 26
+  natOutgoing: true
+  nodeSelector: zone == "second"
