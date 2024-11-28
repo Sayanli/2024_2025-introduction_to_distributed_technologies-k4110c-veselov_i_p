@@ -60,4 +60,4 @@ minikube tunnel
 ![cert](content/cert.png)
 
 13. Построим схему. Клиент заходим по нашему FQDN, попадая на Ingress, который работает как прокси от внешнего источника до сервиса внутри нашего кластера. При попадании на ClusterIP происходит перенаправление на один из наших подов, созданных при помощи replicaSet
-![scheme](content-schema.png)
+![scheme](content/schema.png)
